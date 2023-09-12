@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Task 1");
+        System.out.println("Task 1 (4)");
 
         System.out.println("Version 1 (float in and out)");
         double fa = Input("fa", input);
