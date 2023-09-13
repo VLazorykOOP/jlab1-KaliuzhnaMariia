@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class Task2 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Task 2 (7)");
-
+    static Scanner input;
+    //Input function
+    static int [] Input(){
+        input = new Scanner(System.in);
         System.out.print("Enter the n: ");
         int n = input.nextInt();
         if(n > 400){
@@ -15,12 +15,15 @@ public class Task2 {
             System.out.print("A["+ i + "] = ");
             a[i] = input.nextInt();
         }
-
+        return a;
+    }
+    //Function for task changes
+    static void Task(int[] a){
         boolean foundUnique = false;
         int max = a[0];
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < a.length; i++){
             boolean rep = false;
-            for (int j = 0; j < n; j++){
+            for (int j = 0; j < a.length; j++){
                 if (i != j && a[i] == a[j]){
                     rep = true;
                     break;
@@ -40,5 +43,10 @@ public class Task2 {
         } else {
             System.out.println("No unique numbers in array");
         }
+    }
+    public static void main(String[] args) {
+        System.out.println("Task 2 (7)");
+        int[] a = Input();
+        Task(a);
     }
 }
