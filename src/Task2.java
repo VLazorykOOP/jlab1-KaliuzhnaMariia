@@ -48,5 +48,6 @@ public class Task2 {
         System.out.println("Task 2 (7)");
         int[] a = Input();
         Task(a);
+        input.close();
     }
 }

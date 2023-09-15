@@ -21,6 +21,7 @@ public class Main {
         double db = Input("db", input);
         int rez3 = (int) Res(da, db);
         System.out.println("Result for int: " + rez3);
+        input.close();
     }
     //Input function
     private static double Input(String v, Scanner input){
