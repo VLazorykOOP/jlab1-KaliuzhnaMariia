@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Task3 {
     static Scanner input;
     //Input function
-    static int[][] Input(){
+    static int[][] input(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the n: ");
         int n = input.nextInt();
@@ -20,7 +20,7 @@ public class Task3 {
         return a;
     }
     //Function for task changes
-    static int[][] Task(int[][] a){
+    static int[][] taskChange(int[][] a){
         int maxr = 0;
         int maxel = a[0][0];
         int[][] rez = new int[a.length][a.length];
@@ -41,7 +41,7 @@ public class Task3 {
         return rez;
     }
     //Output function
-    static void Print(int[][] a){
+    static void print(int[][] a){
         for (int i = 0; i < a.length; i++){
             for (int j = 0; j < a.length; j++){
                 System.out.print(a[i][j] + " ");
@@ -51,11 +51,11 @@ public class Task3 {
     }
     public static void main(String[] args) {
         System.out.println("Task 3 (12)");
-        int[][] a = Input();
-        Print(a);
-        a = Task(a);
+        int[][] a = input();
+        print(a);
+        a = taskChange(a);
         System.out.println("Result: ");
         System.out.println();
-        Print(a);
+        print(a);
     }
 }

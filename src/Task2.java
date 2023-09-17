@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Task2 {
     static Scanner input;
     //Input function
-    static int [] Input(){
+    static int [] input(){
         input = new Scanner(System.in);
         System.out.print("Enter the n: ");
         int n = input.nextInt();
@@ -18,18 +18,18 @@ public class Task2 {
         return a;
     }
     //Function for task changes
-    static void Task(int[] a){
+    static void taskChange(int[] a){
         boolean foundUnique = false;
         int max = a[0];
         for (int i = 0; i < a.length; i++){
-            boolean rep = false;
+            boolean repeat = false;
             for (int j = 0; j < a.length; j++){
                 if (i != j && a[i] == a[j]){
-                    rep = true;
+                    repeat = true;
                     break;
                 }
             }
-            if (!rep){
+            if (!repeat){
                 if (!foundUnique) {
                     max = a[i];
                     foundUnique = true;
@@ -46,8 +46,8 @@ public class Task2 {
     }
     public static void main(String[] args) {
         System.out.println("Task 2 (7)");
-        int[] a = Input();
-        Task(a);
+        int[] a = input();
+        taskChange(a);
         input.close();
     }
 }
